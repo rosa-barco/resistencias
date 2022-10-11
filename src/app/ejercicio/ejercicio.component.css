@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel:wght@300&display=swap');
+
+.neg{
+    background-color: #212529;
+    color: #FAFAFA;
+}
+.caf{
+    background-color: #4B3121;
+    color: #FAFAFA;
+}
+.roj{
+    background-color: #FF0000;
+    color: #FAFAFA;
+}
+.nar{
+    background-color: #FF7F00;
+}
+.ama{
+    background-color: #FFFF00;
+}
+.ver{
+    background-color: #00FF00;
+}
+.azu{
+    background-color: #0000FF;
+    color: white;
+}
+.vio{
+    background-color: #8B00FF;
+    color: #FAFAFA;
+}
+.gri{
+    background-color: #CDCDCD;
+}
+.bla{
+    background-color: #FAFAFA;
+}
+.oro{
+    background-color: #EABE3F;
+}
+.pla{
+    background-color: #BEBEBE;
+    color: #212529;
+}
+
+.card-header{
+    background-color: #FFEBCC;
+    vertical-align: middle;
+    border-bottom: 10px solid #FF9999;
+    border-top: 10px solid #FF9999;
+}
+
+select{
+    border-bottom: 2px solid #FF9999;
+    border-top: 2px solid #FF9999;
+}
+
+*{
+    font-family: 'Martel', serif;
+}
+
+h1, h3{  
+    font-family: 'Kalam', cursive;
+    color: #FF9999;
+}
+
+table{
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    border-color: #FF9999;
+    border-bottom: 5px solid #FF9999;
+    border-top: 5px solid #FF9999;
+}
+
+thead{
+    background-color: #FFAFAF;
+}
+
+.btn-primary{
+    background-color: #FFAFAF;
+    border-color: #FFAFAF;
+    margin-right: 40px;
+    color: #212529;
+}
+
+.btn-primary:hover{
+    background-color: #FF9999;
+    border-color: #FF9999;
+}
+
+div{
+    text-align: center;
+}
+
+h1, img{
+    display: inline;
+}
+
+img{
+    margin-left: 25px;
+    margin-right: 25px;
+}

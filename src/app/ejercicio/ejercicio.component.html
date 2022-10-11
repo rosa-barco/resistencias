@@ -1,0 +1,121 @@
+<div class="card">
+    <div class="card-header p-5 text-center">
+        <img src="https://i.postimg.cc/65hSRnFd/Resistencias-de-Arduino-removebg-preview.png" width="220px">
+        <h1 class="h1">Calculador de resistencias</h1>
+        <img src="https://i.postimg.cc/65hSRnFd/Resistencias-de-Arduino-removebg-preview.png" width="220px">
+    </div>
+    <div class="row">
+        <div class="col-4 p-5">
+            <h3 class="h3 text-center">Rellena el formulario</h3><br>
+            <form>
+                <div class="form-floating mb-3 mt-3">
+                    <select name="banda1" class="form-select" id="banda1" [(ngModel)]="banda1">
+                        <option value="" selected>Selecciona una opción</option>
+                        <option value="0" class="neg">Negro - 0</option>
+                        <option value="1" class="caf">Café - 1</option>
+                        <option value="2" class="roj">Rojo - 2</option>
+                        <option value="3" class="nar">Naranja - 3</option>
+                        <option value="4" class="ama">Amarillo - 4</option>
+                        <option value="5" class="ver">Verde - 5</option>
+                        <option value="6" class="azu">Azul - 6</option>
+                        <option value="7" class="vio">Violeta - 7</option>
+                        <option value="8" class="gri">Gris - 8</option>
+                        <option value="9" class="bla">Blanco - 9</option>
+                    </select>
+                    <label for="banda1">Primera Banda</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select name="banda2" class="form-select" id="banda2" [(ngModel)]="banda2">
+                        <option value="" selected>Selecciona una opción</option>
+                        <option value="0" class="neg">Negro - 0</option>
+                        <option value="1" class="caf">Café - 1</option>
+                        <option value="2" class="roj">Rojo - 2</option>
+                        <option value="3" class="nar">Naranja - 3</option>
+                        <option value="4" class="ama">Amarillo - 4</option>
+                        <option value="5" class="ver">Verde - 5</option>
+                        <option value="6" class="azu">Azul - 6</option>
+                        <option value="7" class="vio">Violeta - 7</option>
+                        <option value="8" class="gri">Gris - 8</option>
+                        <option value="9" class="bla">Blanco - 9</option>
+                    </select>
+                    <label for="banda2">Segunda Banda</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select name="banda3" class="form-select" id="banda3" [(ngModel)]="banda3">
+                        <option value="" selected>Selecciona una opción</option>
+                        <option class="neg" value="0">Negro - x1</option>
+                        <option class="caf" value="1">Café - x10</option>
+                        <option class="roj" value="2">Rojo - x100</option>
+                        <option class="nar" value="3">Naranja - x1000</option>
+                        <option class="ama" value="4">Amarillo - x10000</option>
+                        <option class="ver" value="5">Verde - x100000</option>
+                        <option class="azu" value="6">Azul - x1000000</option>
+                        <option class="vio" value="7">Violeta - x10000000</option>
+                        <option class="gri" value="8">Gris - x100000000</option>
+                        <option class="bla" value="9">Blanco - x1000000000</option>
+                    </select>
+                    <label for="banda3">Tercer Banda</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <select name="tolerancia" class="form-select" id="tolerancia" [(ngModel)]="tolerancia">
+                        <option value="" selected>Selecciona una opción</option>
+                        <option value="1" class="oro">Oro 5%</option>
+                        <option value="2" class="pla">Plata 10%</option>
+                        <option value="3" class="caf">Café 1%</option>
+                        <option value="4" class="roj">Rojo 2%</option>
+                        <option value="5" class="ver">Verde 0.5&</option>
+                        <option value="6" class="azu">Azul 0.25%</option>
+                        <option value="7" class="vio">Violeta 0.1%</option>
+                        <option value="8" class="gri">Gris 0.05%</option>
+                    </select>
+                    <label for="tolerancia">Tolerancia</label>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <input type="button" class="btn btn-primary" value="Calcular" (click)="calcular()">
+                    <input type="button" class="btn btn-secondary" value="Limpiar" (click)="limpiar()">
+                </div>
+            </form>
+        </div>
+        <div class="col-8 p-5" [style.display]="display">
+            <h3 class="h3 text-center">Resultado</h3><br>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Banda 1</th>
+                        <th>Banda 2</th>
+                        <th>Banda 3</th>
+                        <th>Tolerancia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td [style.background-color]="colorfondo1" [style.color]="colorletra1">{{color1}}</td>
+                        <td [style.background-color]="colorfondo2" [style.color]="colorletra2">{{color2}}</td>
+                        <td [style.background-color]="colorfondo3" [style.color]="colorletra3">{{color3}}</td>
+                        <td [style.background-color]="colorfondo4" [style.color]="colorletra4">{{color4}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th colspan="2">Valor (Ohms)</th>
+                        <th>Valor máximo</th>
+                        <th>Valor mínimo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="2">{{valor}}</td>
+                        <td>{{valorMax | number : '1.2-2'}}</td>
+                        <td>{{valorMin | number : '1.2-2'}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-8 p-5" [style.display]="display2">
+            <h3>¡Por favor, llene todo el formulario!</h3>
+        </div>
+    </div>
+</div>
