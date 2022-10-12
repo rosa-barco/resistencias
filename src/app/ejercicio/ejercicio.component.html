@@ -56,19 +56,29 @@
                     </select>
                     <label for="banda3">Tercer Banda</label>
                 </div>
-                <div class="form-floating mb-3">
-                    <select name="tolerancia" class="form-select" id="tolerancia" [(ngModel)]="tolerancia">
-                        <option value="" selected>Selecciona una opción</option>
-                        <option value="1" class="oro">Oro 5%</option>
-                        <option value="2" class="pla">Plata 10%</option>
-                        <option value="3" class="caf">Café 1%</option>
-                        <option value="4" class="roj">Rojo 2%</option>
-                        <option value="5" class="ver">Verde 0.5&</option>
-                        <option value="6" class="azu">Azul 0.25%</option>
-                        <option value="7" class="vio">Violeta 0.1%</option>
-                        <option value="8" class="gri">Gris 0.05%</option>
-                    </select>
-                    <label for="tolerancia">Tolerancia</label>
+                <div class="mb-3">
+                    <p>Tolerancia</p>
+                    <div>
+                        <input type="radio" name="tolerancias" id="toleranciaOro" value="1" [(ngModel)]="tolerancia" (click)="otro(0)">
+                        <label for="toleranciaOro" style="margin-right: 20px;">Oro 5%</label>
+                        <input type="radio" name="tolerancias" id="toleranciaPlata" value="2" [(ngModel)]="tolerancia" (click)="otro(0)">
+                        <label for="toleranciaPlata">Plata 10%</label>
+                        <input type="radio" name="tolerancias" id="toleranciaOtro" value="0" [(ngModel)]="radio" (click)="otro(1)" style="margin-left: 20px;">
+                        <label for="toleranciaOtro">Otro</label>
+                    </div>
+                    <br>
+                    <div class="form-floating" [style.display]="display3">
+                        <select name="tolerancia" class="form-select" id="tolerancia" [(ngModel)]="tolerancia">
+                            <option value="" selected>Selecciona una opción</option>
+                            <option value="3" class="caf">Café 1%</option>
+                            <option value="4" class="roj">Rojo 2%</option>
+                            <option value="5" class="ver">Verde 0.5&</option>
+                            <option value="6" class="azu">Azul 0.25%</option>
+                            <option value="7" class="vio">Violeta 0.1%</option>
+                            <option value="8" class="gri">Gris 0.05%</option>
+                        </select>
+                        <label for="tolerancia">Tolerancia</label>
+                    </div>                    
                 </div>
                 <br>
                 <div class="mb-3">

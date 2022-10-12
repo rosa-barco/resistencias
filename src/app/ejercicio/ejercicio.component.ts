@@ -9,11 +9,13 @@ export class EjercicioComponent implements OnInit {
 
   display="none";
   display2="none";
+  display3="none";
 
   banda1: string = '';
   banda2: string = '';
   banda3: string = '';
   tolerancia: string = '';
+  radio: string = '';
 
   valor: string = "";
   valorMax: number = 0;
@@ -325,6 +327,16 @@ export class EjercicioComponent implements OnInit {
 
     this.display="none";
     this.display2="none";
+    this.display3="none";
+    this.radio = '';
+  }
+
+  otro(i:number){
+    if(i==1){
+      this.display3="inline-block";
+    }else{
+      this.display3="none";
+    }
   }
 
   constructor() { }
